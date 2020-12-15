@@ -1,2 +1,2 @@
-Git uzduotis skirta Objektinis Programavimas C# moduliui\n
+# Git uzduotis skirta Objektinis Programavimas C# moduliui
 Padare: Mazvydas Janiskevicius
