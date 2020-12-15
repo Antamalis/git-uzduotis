@@ -29,19 +29,20 @@ namespace GitUzduotis
         /// </summary>
         private void InitializeComponent()
         {
-            this.pridetiSkaiciu = new System.Windows.Forms.Button();
+            this.skaiciuoti = new System.Windows.Forms.Button();
             this.ivestis = new System.Windows.Forms.TextBox();
+            this.isvestis = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // pridetiSkaiciu
+            // skaiciuoti
             // 
-            this.pridetiSkaiciu.Location = new System.Drawing.Point(12, 38);
-            this.pridetiSkaiciu.Name = "pridetiSkaiciu";
-            this.pridetiSkaiciu.Size = new System.Drawing.Size(100, 23);
-            this.pridetiSkaiciu.TabIndex = 0;
-            this.pridetiSkaiciu.Text = "Prideti skaiciu";
-            this.pridetiSkaiciu.UseVisualStyleBackColor = true;
-            this.pridetiSkaiciu.Click += new System.EventHandler(this.pridetiSkaiciu_Click);
+            this.skaiciuoti.Location = new System.Drawing.Point(12, 38);
+            this.skaiciuoti.Name = "skaiciuoti";
+            this.skaiciuoti.Size = new System.Drawing.Size(100, 23);
+            this.skaiciuoti.TabIndex = 0;
+            this.skaiciuoti.Text = "Skaiciuoti";
+            this.skaiciuoti.UseVisualStyleBackColor = true;
+            this.skaiciuoti.Click += new System.EventHandler(this.skaiciuoti_Click);
             // 
             // ivestis
             // 
@@ -50,13 +51,25 @@ namespace GitUzduotis
             this.ivestis.Size = new System.Drawing.Size(100, 20);
             this.ivestis.TabIndex = 1;
             // 
+            // isvestis
+            // 
+            this.isvestis.BackColor = System.Drawing.SystemColors.Control;
+            this.isvestis.Enabled = false;
+            this.isvestis.Location = new System.Drawing.Point(129, 12);
+            this.isvestis.Multiline = true;
+            this.isvestis.Name = "isvestis";
+            this.isvestis.ReadOnly = true;
+            this.isvestis.Size = new System.Drawing.Size(165, 49);
+            this.isvestis.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(306, 78);
+            this.Controls.Add(this.isvestis);
             this.Controls.Add(this.ivestis);
-            this.Controls.Add(this.pridetiSkaiciu);
+            this.Controls.Add(this.skaiciuoti);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -66,8 +79,9 @@ namespace GitUzduotis
 
         #endregion
 
-        private System.Windows.Forms.Button pridetiSkaiciu;
+        private System.Windows.Forms.Button skaiciuoti;
         private System.Windows.Forms.TextBox ivestis;
+        private System.Windows.Forms.TextBox isvestis;
     }
 }
 
