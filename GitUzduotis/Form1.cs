@@ -22,7 +22,7 @@ namespace GitUzduotis
 
         private void skaiciuoti_Click(object sender, EventArgs e)
         {
-            double ivestasSkaicius;
+            double ivestasSkaicius = 1;
 
             if(ivestaSkaiciu > 9)
             {
@@ -46,6 +46,40 @@ namespace GitUzduotis
             }
 
 
+        }
+
+        private void piesti_Click(object sender, EventArgs e)
+        {
+            int ivestasSkaicius;
+            string tekstas = "";
+
+            if(String.IsNullOrEmpty(eglutesDydis.Text) || String.IsNullOrWhiteSpace(eglutesDydis.Text) || !Int32.TryParse(eglutesDydis.Text, out ivestasSkaicius))
+            {
+                eglute.Text = "Ivestas tekstas turi buti sveikasis skaicius!";
+            }
+            else
+            {
+                for (int i = 0; i <= ivestasSkaicius; i++)
+                {
+                    for (int j = 0; j < i * 2 - 1; j++)
+                    {
+                        if(j % 2 == 1)
+                        {
+                            tekstas += " ";
+                        }
+                        else
+                        {
+                            tekstas += "*";
+                        }
+                    }
+
+                    tekstas += "\n";
+                }
+
+                eglute.Text = tekstas;
+                eglute.SelectAll();
+                eglute.SelectionAlignment = HorizontalAlignment.Center;
+            }
         }
     }
 }
